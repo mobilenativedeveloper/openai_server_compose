@@ -1,6 +1,8 @@
 version: '2'
 services:
     openai_server:
+        environment:
+            - GPT_TOKEN='testkey'
         image: registry.matreshkavpn.com:5000/openai_server
         restart: always
         container_name: 'openai_server'
